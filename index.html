@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Bored Games</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="tell">
+        <h4>Tap next to continue</h4>
+    </div>
+    <div class="continer" id="blockOne">
+        <div>
+            <label for="book">
+                <h2>
+                    Book Tales
+                </h2>
+            </label>
+        </div>
+        <div>
+            <h3 class="nsers" id="theOne"></h3>
+        </div>
+        <div>
+            <textarea name="book" id="book" cols="30" rows="10" placeholder="a list of authors,(year), title, other info..."></textarea>
+        </div>
+        <button  class="sub" onclick="doThingBook()">Submit</button>
+    </div>
+    
+    <div class="continer" id="blockTwo">
+        <div>
+            <label for="time">
+                <h2>
+                    Date-Time Formater
+                </h2>
+            </label>
+        </div>
+        <div>
+            <h3 class="nsers" id="theSec"></h3>
+        </div>
+        <div>
+            <input type="text" id="time" placeholder="Enter the date and time (yyyy-mm-dd hh:mm) :">
+        </div>
+        <button  class="sub" onclick="doThingTimeDte()">Submit</button>
+    </div>
+
+    <div class="continer" id="blockThree">
+        <div>
+            <label for="list">
+                <h2>
+                    List Maker
+                </h2>
+            </label>
+        </div>
+        <div>
+            <h3 class="nsers" id="thethird"></h3>
+        </div>
+        <div>
+            <input type="text" id="list" placeholder="Enter a  sentence">
+        </div>
+        <button  class="sub" onclick="doThingList()">Submit</button>
+    </div>
+    <div class="continer" id="blockFour">
+        <div>
+            <label for="Latin">
+                <h2>
+                    Pig Latin
+                </h2>
+            </label>
+        </div>
+        <div>
+            <h3 class="nsers" id="theLst"></h3>
+        </div>
+        <div>
+            <textarea name="book" id="Latin" cols="30" rows="10" placeholder="Enterway away entenceasay"></textarea>
+        </div>
+        <button  class="sub" onclick="doThingPig()">Submit</button>
+    </div>
+    <div class="child">
+        <div id="prev"onclick="lstPg()">Back</div>
+        <div id="next"onclick="nextpg()">Next</div>
+    </div>
+
+    <script src="function.js"></script>
+    <script src="brekUp.js"></script>
+    <script src="book.js"></script>
+    <script src="convert.js"></script>
+    <script src="pigLatin.js"></script>
+</body>
+</html>

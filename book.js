@@ -48,7 +48,7 @@ function doThingBook(){
         
         
     }
-    text= text.replace(tittleOld, fullTittles) ;;
+    text= text.replace(tittleOld, fullTittles) ;
       
       document.getElementById('theOne').textContent= text;
     console.log("Wassup Eno");

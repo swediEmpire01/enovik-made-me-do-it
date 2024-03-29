@@ -2,9 +2,9 @@ function doThingBook(){
     // captures user input
     let text= document.getElementById('book').value;
 
-    let namesOld=text.slice(0,text.indexOf("(")).trim(); 
-    let names= namesOld.split(" "); 
-
+    let namesOld= text.slice(0, text.indexOf("(")).trim();
+    let names= namesOld.split(" ") ;
+    
     let fullNames="";
     names.forEach(element => {
         // This extracts the first name and capterlizes it
@@ -19,38 +19,38 @@ function doThingBook(){
         element= firstLetter+ rest;
         fullNames+= `${element} `;
     });
-    text= text.replace(namesOld, fullNames) ;
     
+    text= text.replace(namesOld, fullNames);
 
     let textDemo= text.replace(names[0], 1);
     let tittleOld= textDemo.slice(text.indexOf(")")+1 ).trim();
-    let tittle= titleOld.split(" ");
-    console.log(tittle);
+    let tittle= tittleOld.split(" "); //here
     
-    let fullTittles="";
+    let newTittle="";
     for (let index = 0; index < tittle.length; index++) {
         let element = tittle[index];
         let firstLetter;
-        let rest;
 
+
+        let rest;
 
         if(index== 0){
             firstLetter= element.charAt(0).toUpperCase();
-            rest= element.slice(1).toLowerCase();
+            rest= element.slice(1);
             element= firstLetter+ rest;
-            fullTittles+= `${element} `;
-
+            newTittle+= `${element} `;
+''
         }
         else{
             element= element.toLowerCase();
-            fullTittles+= `${element} `;
+            newTittle+= `${element} `;
         }
-        
-        
     }
-    text= text.replace(tittleOld, fullTittles) ;
-      
-      document.getElementById('theOne').textContent= text;
-    console.log("Wassup Eno");
+    text= text.replace(tittleOld, newTittle);
+
+
+    // displys on the Website
+    document.getElementById('theOne').textContent= text;
+
         
 }

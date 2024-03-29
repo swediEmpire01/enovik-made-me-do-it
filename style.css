@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     background-color: rgb(122, 178, 221);
-    font-family: 'Arial Narrow Bold' , Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
 }
 
 div.continer{

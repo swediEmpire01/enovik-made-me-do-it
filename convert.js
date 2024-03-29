@@ -20,9 +20,20 @@ function doThingTimeDte(){
         case "3":
             dte= Number(dte)+ "rd";
             break;
-    
         default:
             dte= Number(dte)+ "th"
+            break;
+    }
+    position= dte.slice(0,2);
+    switch (position) {
+        case "11":
+            dte= dte.replace("st", "th");
+            break;
+        case "12":
+            dte= dte.replace("nd", "th");
+            break;
+        case "13":
+            dte= dte.replace("rd", "th");
             break;
     }
 
@@ -39,7 +50,7 @@ function doThingTimeDte(){
         time= hours+mins+"am"
     }
     // check dte
-    yer=yer.slice(yer.indexOf("0")+1)
+    yer=yer.slice(2);
 
     // check month
     switch (month) {
@@ -79,7 +90,7 @@ function doThingTimeDte(){
         case 12:
             month= "December";
          break;
-    default:
+    default: month="not valid month";
             break;
     }
     document.getElementById('theSec').textContent= `${time} on the ${dte} of ${month} '${yer}`;

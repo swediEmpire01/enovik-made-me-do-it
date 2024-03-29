@@ -2,9 +2,9 @@ function doThingBook(){
     // captures user input
     let text= document.getElementById('book').value;
 
-    let disply="";
-    let names= text.slice(0, text.indexOf("(")).trim().split(" ");
-    
+    let namesOld=text.slice(0,text.indexOf("(")).trim(); 
+    let names= namesOld.split(" "); 
+
     let fullNames="";
     names.forEach(element => {
         // This extracts the first name and capterlizes it
@@ -19,14 +19,12 @@ function doThingBook(){
         element= firstLetter+ rest;
         fullNames+= `${element} `;
     });
-    disply= disply + fullNames;
+    text= text.replace(namesOld, fullNames) ;
+    
 
-    // ads the date
-    let dte= text.slice(text.indexOf("("), text.indexOf(")")+1);
-    disply= disply+ dte + " ";
-
-    text= text.replace(names[0], 1);
-    let tittle= text.slice(text.indexOf(")")+1 ).trim().split(" ");
+    let textDemo= text.replace(names[0], 1);
+    let tittleOld= text.slice(text.indexOf(")")+1 ).trim();
+    let tittle= titleOld.split("");
     console.log(tittle);
     
     let fullTittles="";
@@ -50,8 +48,9 @@ function doThingBook(){
         
         
     }
-    disply= disply+ fullTittles;
-    document.getElementById('theOne').textContent= disply;
-
+    text= text.replace(tittleOld, fullTittles) ;;
+      
+      document.getElementById('theOne').textContent= text;
+    console.log("Wassup Eno");
         
 }

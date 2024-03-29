@@ -23,7 +23,7 @@ function doThingBook(){
     
 
     let textDemo= text.replace(names[0], 1);
-    let tittleOld= text.slice(text.indexOf(")")+1 ).trim();
+    let tittleOld= textDemo.slice(text.indexOf(")")+1 ).trim();
     let tittle= titleOld.split(" ");
     console.log(tittle);
     

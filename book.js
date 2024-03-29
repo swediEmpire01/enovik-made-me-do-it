@@ -42,7 +42,7 @@ function doThingBook(){
 ''
         }
         else{
-            element= element.toLowerCase();
+            element= element;
             newTittle+= `${element} `;
         }
     }
